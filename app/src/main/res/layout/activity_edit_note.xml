@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".EditNoteActivity">
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleEditText"
+        android:hint="Date"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/statusEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateEditText"
+        android:hint="Status"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/placeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Place"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/statusEditText"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/establishmentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Establishment"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/placeEditText"
+        android:singleLine="true"/>
+
+    <RadioGroup
+        android:id="@+id/typeRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/establishmentEditText"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radioVollzeit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vollzeit"/>
+
+        <RadioButton
+            android:id="@+id/radioTeilzeit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teilzeit"/>
+
+        <RadioButton
+            android:id="@+id/radioSonstiges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sonstiges"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/remarksEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/typeRadioGroup"
+        android:hint="Remarks"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"
+        android:singleLine="true"/>
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_below="@id/remarksEditText"/>
+</RelativeLayout>
